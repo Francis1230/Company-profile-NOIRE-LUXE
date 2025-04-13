@@ -1,0 +1,285 @@
+﻿body {
+    font-family: 'Playfair Display', monospace;
+    background-color: #1D2433;
+    color: #eee;
+}
+
+/* Hero */
+.hero {
+    background-image: url('images/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop-now-btn {
+    font-size: 20px;
+    padding: 16px 32px;
+    border: 2px solid #ffffff; /* Light frame (white border) */
+    transition: all 0.3s ease-in-out;
+}
+
+    .shop-now-btn:hover {
+        background-color: #ffffff;
+        color: #000000;
+        transform: scale(1.1); /* Slight zoom on hover */
+    }
+
+.shop-now-btn {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3); /* Soft glow */
+}
+
+
+.logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in;
+}
+
+.hover-effect {
+    background-color: #333;
+    color: white;
+    padding: 12px 24px;
+    margin-top: 16px;
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out;
+}
+
+    .hover-effect:hover {
+        transform: scale(1.1);
+        background-color: #555;
+    }
+
+/* Founders */
+/* Founders Section */
+.section-title {
+    color: #fff;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #888;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.founder-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.founder-card {
+    width: 300px;
+    position: relative;
+}
+
+/* Hide checkbox */
+.toggle-info {
+    display: none;
+}
+
+/* Image styling and hover effect */
+.founder-img-label {
+    cursor: pointer;
+    display: block;
+}
+
+.founder-img {
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.founder-hover:hover {
+    transform: scale(1.05);
+}
+
+/* Description box */
+.founder-info {
+    display: none;
+    background-color: rgba(30, 30, 30, 0.95);
+    color: #fff;
+    border-radius: 16px;
+    margin-top: 20px;
+    padding: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Show description when image is clicked */
+.toggle-info:checked + .founder-img-label + .founder-info {
+    display: block;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Portfolio Section */
+#portfolio {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.portfolio-toggle {
+    display: none;
+}
+
+/* Button Style */
+.portfolio-button {
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 2px solid #888;
+    padding: 12px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    margin-bottom: 30px;
+    transition: background 0.3s, color 0.3s;
+}
+
+    .portfolio-button:hover {
+        background-color: #333;
+        color: #f0f0f0;
+    }
+
+/* Gallery hidden by default */
+.portfolio-gallery {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.8s ease;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Reveal when toggled */
+.portfolio-toggle:checked + .portfolio-button + .portfolio-gallery {
+    max-height: 2000px; 
+    opacity: 1;
+    padding-top: 20px;
+}
+
+/* Image style */
+.portfolio-image img {
+    width: 280px;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+    transition: transform 0.4s ease;
+}
+
+    .portfolio-image img:hover {
+        transform: scale(1.05);
+    }
+
+/* Contact Section */
+#contact {
+    padding: 60px 20px;
+    background-color: #121212;
+    color: #f0f0f0;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+    .contact-info a {
+        color: #c7a17a;
+        text-decoration: none;
+        margin: 0 6px;
+        transition: color 0.3s ease;
+    }
+
+        .contact-info a:hover {
+            color: #fff;
+        }
+
+.map-container {
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+
+
+
+/* Contact Icons */
+.social-btn {
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+    .social-btn:hover {
+        transform: scale(1.1);
+    }
+
+.social-icon {
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceSlide {
+    0% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.1) translateX(5px);
+    }
+
+    60% {
+        transform: scale(0.95) translateX(-5px);
+    }
+
+    100% {
+        transform: scale(1) translateX(30px);
+    }
+}
